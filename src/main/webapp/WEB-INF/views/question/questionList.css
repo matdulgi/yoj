@@ -1,0 +1,17 @@
+@charset "UTF-8";
+#questTitle{
+	width:300px;	
+	text-align:left;
+}
+.questTitle{
+	color:#007bb7;
+}
+
+.questTitle:hover{
+	text-decoration:underline;
+}
+@media screen and (max-width:768px){
+	#questTitle{
+		width:auto;
+	}
+}

@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+footer {
+	background: #2f2f2f;
+	display:block;
+}
+#footerbox{
+	color: white;
+	width:768px;
+	margin:50px auto;
+}
+
+
+.footer nav{
+	margin:30px 30px;
+	display:inline-block;
+	width:140px;
+}
+
+footer nav h3 {
+	color: white
+}
+
+footer p {
+	color: lightgray;
+}
+
+@media screen and (max-width:768px){
+	footer nav{
+		diplay:block;
+		width:100%;
+	}	
+}

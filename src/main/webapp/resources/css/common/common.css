@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+
+#headline{
+	border-top:1px solid lightgray;
+	border-bottom:1px solid lightgray;
+	background:#f7f7f7;
+}
+#headline h3{
+	width:768px;
+	margin:20px auto;
+	font-size:22px;
+	text-shadow:0px 0px 1px;
+	color:gray;
+	font-weight:500;
+	padding:20px;
+	}
+hr{
+	width:90%;
+	border:solid 1px #e9e9e9;
+	border-bottom:none;
+	margin:20px auto;
+}
+
+
+/* 폼  */
+
+#loginform, #joinform{
+	margin:40px auto;
+	display:flex;
+	align-items:center;
+	flex-direction:column;
+}
+#inputBox{
+	width:80%;
+	padding:0 auto;
+	text-align:left;
+	color:gray;
+	font-weight:600;
+}
+#inputBox p{
+	margin: 5px auto;
+	margin-top:15px;
+	font-size:14px;
+}
+#submitBox{
+	display:flex;
+}
+form label{
+	display:flex;
+	width:80%;
+	margin:0 auto;
+	align-items:center;
+}
+.checkbox{
+	cursor:pointer;
+	color:gray;
+}
+.input:focus{
+	box-shadow:0px 0px 5px gray;
+	outline:solid 1px lightgray;
+	border:0px;
+	transition:box-shadow 0.3s;
+}
+.input{
+	height:30px;
+	border:solid 1px lightgray;
+	width:100%;
+}
+#id, #pw{
+	background:aliceblue;
+}
+.submit{	
+	width:100px;
+	height:40px;
+	background:#007bb7;
+	color:white;
+	border:none;
+	margin: 20px 40px 10px;
+}
+button:hover{
+	filter:brightness(120%);
+	cursor:pointer;
+}
+
+#readme{
+	color:gray;
+	font-size:13px;
+	font-weight:600;
+	display:inline-block;
+	text-align:left;
+	width:90%;
+	padding:20px;
+}
+#readme p{
+	padding:1px;
+	display:block;
+}
+#readme a{
+	color:#007bb7;
+	text-decoration:none;
+}
+#readme a:hover{
+	text-decoration:underline;
+}
+
+@media screen and(max-width:767px){
+	#inputBox{
+	width:80%;
+	}
+}
+
+
+/*게시판 글목록*/
+.boardtable{
+	border:1px solid lightgray;
+	border-collapse :collapse;
+	width:740px;
+	padding:auto;
+	margin:20px auto 50px;
+	text-align:left;
+	font-size:0.9em;
+}
+.boardtable th{
+	border:1px solid lightgray;
+	padding:15px 10px 15px 10px;
+}
+.boardtable td{
+	border:1px solid lightgray;
+	padding:10px 10px 10px 10px;
+}
+table a{
+	text-decoration:none;
+}
+.defaultCell{
+	width:80px;
+}
+.boardtable tr:nth-child(even){
+	background:#fafafa;
+}
+@media screen and (max-width:767px){
+	body{
+		width:100%;
+	}
+	.boardtable{
+	width:auto;
+	overflow:hidden;
+	}
+}
+	
+.container{
+	width:768px;
+	margin:0px auto;
+}
+	
+/* 필터 */	
+	
+	

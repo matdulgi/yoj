@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+
+#ad_wrapper{
+	width:768px;
+	margin:0 auto;
+	border:solid 1px lightgray;
+	margin:0px auto 20px;
+	cursor:pointer;
+	height:auto;
+}
+#adimg{
+	float:right;
+	margin-right:20px;
+}
+#adbox{
+	height:130px;
+}
+#adbox h3, #adbox p{
+	width:auto;
+	margin-left:20px;
+}
+@media screen and (max-width:767px){
+	#ad_wrapper{
+		width:100%;
+	}
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+
+	<!-- DataSource -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property> 
+		<property name="url" value="jdbc:oracle:this:@www.dulgi.xyz:1521:xe"></property>
+		<property name="username" value="onlineJudge"></property>
+		<property name="password" value="1234"></property>
+	</bean>
+	
+	<!-- SqlSessionFactory 빈 등록-->
+	<!-- classpath: 가 어디를 의미하는지는 다른 의견이 존재했는데, 
+	결국은 같은 클래스패스이지만, 클래스 패스를 따로 등록하지 않았을 경우 기본 경로를 참조한다는 것과 관련이 있을 듯 하다
+	그럼 클래스 패스 경로를 지정한다면, classpath: 는 사용하기 어려운건가? -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+<!-- 		<property name="mapperLocations" value="/resources/mappers/*"/> -->
+		<property name="mapperLocations" value="classpath:mappers/*"/>
+	</bean>
+	
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		  <constructor-arg ref="sqlSessionFactory" />
+	</bean>
+<!-- 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+ -->
+</beans>

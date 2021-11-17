@@ -1,0 +1,47 @@
+@charset "UTF-8";
+#question{
+	color:#5e5e5e;
+	width:768px;
+	margin:20px auto;
+}
+@media screen and (max-width:767px){
+	#question{
+		width:95%;
+	}
+}
+#questtitle, .head{
+	font-weight:500;
+	text-shadow:0px 0px 1px;
+	border-bottom:1px dotted lightgray;
+}
+#questtitle span, .head span{
+	border-bottom:1px solid #007bb7
+}
+#question p{
+	font-size:0.95em;
+	padding:2px 0px;
+}
+#requirements{
+	border-collapse:collapse;
+	width:100%;
+	margin:0 auto;
+}
+#requirements thead, #requirements tbody{
+	border:1px solid lightgray;
+	font-size:13px;
+	text-align:left;
+	width:80%;
+	height:1.3em;
+	padding:10px;
+	margin:0 auto;
+}
+#requirements th, #requirements td{
+	height:30px;
+	padding:5px;
+}
+.inputEx, .outputEx{
+	overflow:scroll;
+	background:#fafafa;
+	border:solid 1px #e8e8e8;
+	height:60px;
+}

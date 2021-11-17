@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>boardMenu</title>
+<link rel="stylesheet" type="text/css" href="${css}/boardMenu.css">
+</head>
+<body>
+<nav>
+<ul id="boardMenu">
+<li><a href="board.do?boardCategory=all&pageNum=1">전체</a></li>
+<li><a href="board.do?boardCategory=information&pageNum=1">공지</a></li>
+<li><a href="board.do?boardCategory=free&pageNum=1">자유</a></li>
+<li><a href="board.do?boardCategory=question&pageNum=1">질문</a></li>
+<li><a href="board.do?boardCategory=correct&pageNum=1">오타/오역/요청</a></li>
+<li><a href="write.do?writeType=normal">글쓰기</a></li>
+</ul>
+</nav>
+</body>
+</html>

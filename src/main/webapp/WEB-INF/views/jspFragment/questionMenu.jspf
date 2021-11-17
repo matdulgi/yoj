@@ -1,0 +1,40 @@
+<%@page import="com.yura.yoj.dto.QuestionDto"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<nav>
+<%-- <%
+QuestionDto questionDto = (QuestionDto)request.getAttribute("questionDto");
+int questionNum;
+if(questionDto!= null)questionNum = questionDto.getQuestionNum();
+else questionNum = Integer.parseInt(request.getParameter("questionNum"));
+%> --%>
+
+<c:set var="questionDto" value="${requestScope.questionDto}"/>
+
+<c:choose>
+<c:when test="${questionDto ne null}">
+<c:set var="questionNum" value="${questionDto.questionNum }"/>
+<%System.out.println("퀘스쳔넘 : " + pageContext.getAttribute("questionNum")); %>
+</c:when>
+<c:otherwise>
+<c:set var="questionNum" value="${param.questionNum}"/>
+</c:otherwise>
+</c:choose>
+
+ <%-- <c:set var="questionNum" value="${requestS }"/> --%>
+<a href="viewQuestion.do?questionNum=${questionNum}">${questionNum}번</a>
+<a href="submit.do?questionNum=${questionNum}">제출</a>
+<a href="#">맞은 사람</a>
+<a href="#">재채점 결과</a>
+<a href="#">채점 현황</a>
+</nav>
+</body>
+</html>

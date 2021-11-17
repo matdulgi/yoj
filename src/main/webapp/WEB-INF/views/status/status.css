@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.point{
+	color:red;
+}
+.time{
+	color:#007bb7
+}
+
+
+#filter{
+	width:700px;
+	margin:0 auto;
+}
+.searchBtn{
+	background:#007bb7;
+	color:white;
+	border:none;
+	height:40px;
+	width:60px;
+}
+#filter select, #filter input{
+	height:40px;
+	margin:0;
+	padding:0 0 0 5px;
+	border:1px solid gray;
+}
+
+@media screen and 

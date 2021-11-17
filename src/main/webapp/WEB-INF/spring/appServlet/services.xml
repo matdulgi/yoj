@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+<!-- 비즈니스 로직은 교체될 수 있다는걸 전제로 하지만, 
+관습적으로 인터페이스를 사용하는 것보다 xml에서 관리하는게 낫다고 생각했다 -->	
+	<bean class="com.yura.yoj.service.BoardService"></bean>
+	<bean class="com.yura.yoj.service.MemberService"></bean>
+	<bean class="com.yura.yoj.service.QuestionService"></bean>
+	<bean class="com.yura.yoj.service.StatusService"></bean>
+
+</beans>

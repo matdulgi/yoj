@@ -1,0 +1,9 @@
+@charset "UTF-8";
+#write{
+	display:flex;
+	flex-direction:column;
+	width:400px;
+}
+#content, #source{
+	height:300px;
+}

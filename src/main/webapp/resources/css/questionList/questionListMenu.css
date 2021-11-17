@@ -1,0 +1,68 @@
+@charset "UTF-8";
+#menu_container, #filter_contariner{
+	width:768px;
+	margin:0 auto;
+}
+@media screen and (max-width:767px){
+	#menu_container, #filter_contariner{
+	width:100%;
+	margin:0 auto;
+}
+}
+#menu_container{
+	justify-content: space-between;
+}
+#questionNav{
+	list-style-type:none;
+	padding:0;
+	margin-left:20px;
+}
+#questionNav li, #optionBtn{
+	display:inline-block;
+}
+#questionMenu a{
+	padding:10px 20px;
+	text-decoration:none;
+	color:#474747;
+}
+#selectedMenu{
+	background:steelblue;
+	color:white;
+}
+.condition{
+	float:right;
+}
+#optionBtn{
+	margin:auto 0px;
+}
+#filter_container{
+	width:600px;
+	border:solid 1px #e8e8e8;
+	display:none;
+}
+#filter_container.active{
+	display:flex;
+}
+#filterBox{ 
+	margin:20px;
+	
+}
+.search_container{
+	display:flex;	
+	width:80%;
+	margin: 30px; auto;
+}
+.search_container input{
+	height:40px;
+}
+.searchButton{
+	border:0;
+	background:steelblue;
+	width:40px;
+}
+
+@media screen and (max-width:767px){
+.search_container{
+	display:flex;	
+}
+}

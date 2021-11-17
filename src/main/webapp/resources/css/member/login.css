@@ -1,0 +1,32 @@
+@charset "UTF-8";
+#login_container{
+	width:400px;
+	margin:30px auto;
+	text-align:center;
+	border:solid 1px lightgray;
+	box-shadow:0px 0px 3px lightgray;
+	color:#424242;
+}
+@media screen and (max-width:767px){
+	#login_container{
+		width:90%;
+	}
+}
+form img{
+	width:24px;
+	height:auto;
+	padding:4px;
+	border:solid 1px lightgray;
+	border-right:none;
+}
+#loginfailed{
+	color:red;
+}
+
+
+#loginHead{
+	padding-top:20px;
+}
+
+@media screen and(max-width:767px){
+}

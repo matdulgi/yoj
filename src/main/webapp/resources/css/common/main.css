@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+#slideWrapper{/* wrapper 추가 */
+	height:400px;
+	 overflow:hidden;
+}
+.slide{
+	position:relative;
+	 width:100%;
+}
+@media screen and (max-width:767px){
+#slideWrapper{
+	height:auto;
+}
+	.slide{
+	}
+}
+p{
+	color:424242;
+	font-size:0.8em;
+	
+}
+#slidegage{
+	border-top:5px solid gray;
+}
+
+#mainDiv1{
+	height:200px;
+	text-align:center;
+}
+#div1head{
+	margin-top:30px;
+	color: #424242;
+	margin-bottom:0;
+	padding-bottom:0;
+	font-size:20px;
+}
+#midline{
+	height:0px;
+	width:50px;
+	border-top:solid 2px #424242;
+	margin:0px auto;
+	padding:0px;
+}
+
+
+
+#questInfo{
+	width:768px;
+	margin:0 auto;
+	text-align:center;
+}
+#questInfo_container{
+	background-color : #2f2f2f;
+	height:auto;
+}
+.questInfoDiv{
+	display:inline-block;
+	padding:50px 0px;
+}
+.questInfoBox{
+	display:inline-block;
+	padding:10px 0px;
+	border:solid 1px gray;
+	margin:0px 8px;
+	color:white;
+	font-size:16px;
+	font-weight:600;
+	width:150px;
+}
+.status{
+	font-size:25px;
+}
+
+.questsub{
+	font-size:13px;
+}
+@media screen and (max-width:767px){
+	#questInfo{
+	width:auto;
+	}
+	.questInfoDiv{
+	display:block;
+	width:100%;
+	}
+	.questInfoBox{
+	width:40%;
+	height:100px;
+	font-size:1.5em;
+	}
+	.status, questsub{
+	font-size:1.5em;
+	}
+}
+
+
+#mainboards{
+	width:768px;
+	margin:0 auto;	
+	display:flex;
+	flex-wrap:wrap;
+	height:auto;
+}
+.mainboard{
+flex-basis:300px;
+height:400px;
+padding:10px 20px 10px;
+margin:50px 20px;
+font-size:20px;
+font-weight:600;
+text-align:left;
+overflow:hidden;
+}
+.mainboardTitle{
+	border-bottom:solid 3px #0095dd;
+}
+.mainboard ul{
+	border-top:dotted 1px lightgray;
+	padding:20px 0 ;
+	width:100%;
+	margin:0;
+	margin-bottom:20px;
+}
+.mainboard li{
+	list-style:none;	
+	background:#f7f7f7;
+	box-shadow:2px 2px lightgray;
+	border:solid 2px aliceblue;
+	text-shadow:1px;
+	padding:5px 10px;
+	margin:10px 0px;
+	width:90%;
+	font-weight:400;
+	font-size:15px;
+}
+.memberID{
+	color:#0095dd;
+	border:none;
+}
+.postTitle{
+	display:inline-block;
+	margin-left:5px;
+}
+.postTitle:hover{
+	text-decoration:underline;
+}
+@media screen and (max-width:767px){
+	#mainboards{
+		width:100%;
+	}
+	
+}
+

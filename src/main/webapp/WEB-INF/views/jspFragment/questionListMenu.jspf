@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="questionMenu.js"></script>
+<link rel="stylesheet" type="text/css" href="${css}/questionListMenu.css">
+
+</head>
+<body id="questionMenu">
+	<div id="menu_container">
+	
+		<div class="condition">
+			<a href="#" id="optionBtn">옵션<img src="${sources}/arrow-down.png"
+				width="15px"></a>
+		</div>
+		<nav>
+			<ul id="questionNav">
+				<li><a href="#" id="selectedMenu">전체</a></li>
+				<li><a href="#">단계</a></li>
+				<li><a href="#">추가된 문제</a></li>
+			</ul>
+		</nav>
+		<div class="search_container">
+			<input type="search" placeholder="검색" class="input">
+			<button class="searchButton">
+				<img src="${sources}/search_white.png" width="18px">
+			</button>
+		</div>
+	</div>
+	<div id="filter_container">
+		<form id="filterBox">
+			<div id="criteria">
+				<p>문제 정렬</p>
+				<input type="radio" name="filter1" checked>문제 번호<input
+					type="radio" name="filter1">맞은 사람<input type="radio"
+					name="filter1">제출<input type="radio" name="filter1">정답
+				비율
+			</div>
+			<hr>
+			<div>
+				<p>정렬 순서</p>
+				<input type="radio" name="order" checked>오름차순<input
+					type="radio" name="order">내림차순
+			</div>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+@charset "UTF-8";
+#boardMenu{
+	display:flex;
+}
+
+#boardMenu li{
+	list-style:none;
+	padding:20px auto;
+	margin:20px auto;
+}

@@ -1,0 +1,87 @@
+<%@page import="com.yura.yoj.status.MemberStatus.LoginStatus"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 일단은 여기다가 변수 모아두자........ 잉.. 나중에 xml에 넣던지 변수 많아지면 변수용 jsp하나 추가하던지 -->
+<!-- rootpath, css, js 경로용 -->
+<c:set var='rootPath' value="${pageContext.servletContext.contextPath}"/>
+<c:set var='css' value="${rootPath}/resources/css"/>
+<c:set var='js' value="${rootPath}/resources/js"/>
+<c:set var='sources' value="${rootPath}/resources/sources"/>
+<%System.out.println("rootPath : " + pageContext.getAttribute("rootPath")); %>
+
+<!-- LoginStatus -->
+<c:set var="GUEST" value="<%=LoginStatus.GUEST %>"/>
+<c:set var="MEMBER" value="<%=LoginStatus.GUEST %>"/>
+<c:set var="MANAGER" value="<%=LoginStatus.GUEST %>"/>
+
+ <!-- /컨텍스트명 까지 다 써줘야 적용이 된다 => href를 절대경로로 사용하면 진짜 쌩 포트번호 뒤부터 시작한다
+ 근데 모든 요청에는 컨텍스트명이 포함돼야돼...... -->
+<link rel="stylesheet" type="text/css" href="${css}/common/header.css">
+<link rel="stylesheet" type="text/css" href="${css}/common/common.css">
+<link rel="icon" href="${sources}/tabIcon.png">
+ </head>
+<body>
+	<header id="mainHeader">
+		<a id="mainLogo" href="${rootPath}/main.do"> 
+			<img src="${sources}/logo.png" width="230"> 			
+		</a>
+ 		<div id="userMenu">
+		<!-- 유저 메뉴. 사용자마다 다른 메뉴 출력 -->
+<%-- 		<c:set var="loginStatus" value="${session.loginStatus}"/>
+		<c:set var="loginId" value="${session.loginId}"/>
+		<c:if test="${loginStatus eq null}">
+		<c:set var="loginStatus" value="<%=LoginStatus.GUEST %>"/>
+		</c:if>
+		<c:choose>
+		<c:when test="${loginStatus eq ${MEMBER}">
+		</c:when>
+		<c:when test="${loginStatus eq ${GUEST}">
+		</c:when>
+		</c:choose> --%>
+			<%
+			LoginStatus loginStatus = (LoginStatus) session.getAttribute("loginStatus");//요청으로부터 속성을 받아오는데 없다....
+			String loginId = (String) session.getAttribute("loginId");
+				//out.println("로그인 상태" + loginStatus);
+				if (loginStatus == null)
+					loginStatus = LoginStatus.GUEST;
+				switch (loginStatus) {
+				case MEMBER:
+					out.print("<a href='/PJ_spring/status.do'>" + loginId + "</a>" + "<p>|</p>"
+							+ "<a href='/PJ_spring/coinMain.do'>" + "코인" + "</a>" + "<p>|</p>"
+							+ "<a href='/PJ_spring/setting.do'>" + "설정" + "</a>" + "<p>|</p>"
+							+ "<a href='/PJ_spring/logout.do'>로그아웃</a>" + "<p>|</p>"
+							+ "<a href='/PJ_spring/coinMain.do'>" + "🌎" + "</a>" + "<p>|</p>"
+							+ "<a href='/PJ_spring/coinMain.do'>" + "⭐" + "</a>");
+					break;
+				case GUEST:
+					out.print("<a href='/PJ_spring/join.do'>회원가입</a>" + "<p>|</p>"
+							+ "<a href='/PJ_spring/login.do'>로그인</a>");
+					break;
+				}
+			%>
+		</div>
+		<br> <br>
+		<!-- 메인 메뉴 -->
+		<a class="menuLogo" id="menuLogo" href='#'><img
+			src="${sources}/hambergerBtn.png" width="45px" class="ham"></a>
+		<nav id='mainMenu'>
+			<a class="menu" href='${rootPath}/question.do'>문제</a> 
+			<a class="menu" href='${rootPath}/status.do'>채점 현황</a>
+			<a class="menu" href='${rootPath}/ranklist.do'>랭킹</a> 
+			<a class="menu" href='${rootPath}/board.do'>게시판</a>
+			<a class="menu" href='${rootPath}/search.do'><img src="${sources }/search.png" width="20px"></a>
+		</nav>
+	</header>
+
+	<script src="${js}/common/header.js"></script>
+	<script src="${js}/common/jquery.js"></script>
+</body>
+</html>
